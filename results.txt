@@ -1,0 +1,21 @@
+Browser: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30; .NET CLR 3.0.04506.648; .NET CLR 3.5.21022)
+Running array_constructor, array_constructor_static_array_length, array_constructor_static_array_length_nocache, array_literal, caching_document, original, original2, static_array_length for at least 2 seconds...
+                                     original:   2.000s @   1740/s (n=3480, x=174, b=0.534ms, w=0.718ms, a=0.575ms)
+                                    original2:   2.000s @   1410/s (n=2820, x=141, b=0.660ms, w=0.780ms, a=0.709ms)
+                                array_literal:   2.047s @   1898/s (n=3885, x=185, b=0.503ms, w=0.595ms, a=0.527ms)
+                            array_constructor:   2.000s @   1913/s (n=3825, x=225, b=0.484ms, w=0.556ms, a=0.523ms)
+                             caching_document:   2.061s @   2655/s (n=5472, x=342, b=0.316ms, w=0.459ms, a=0.377ms)
+                          static_array_length:   2.032s @   2697/s (n=5481, x=261, b=0.299ms, w=0.421ms, a=0.371ms)
+        array_constructor_static_array_length:   2.031s @   2671/s (n=5424, x=226, b=0.345ms, w=0.482ms, a=0.374ms)
+array_constructor_static_array_length_nocache:   2.062s @   1891/s (n=3900, x=195, b=0.477ms, w=0.641ms, a=0.529ms)
+                                                  Rate  original2  original  array_constructor_static_array_length_nocache  array_literal  array_constructor  caching_document  array_constructor_static_array_length  static_array_length
+                                     original2  1410/s         --      -19%                                           -25%           -26%               -26%              -47%                                   -47%                 -48%
+                                      original  1740/s        23%        --                                            -8%            -8%                -9%              -34%                                   -35%                 -35%
+ array_constructor_static_array_length_nocache  1891/s        34%        9%                                             --         -0.34%                -1%              -29%                                   -29%                 -30%
+                                 array_literal  1898/s        35%        9%                                          0.35%             --             -0.76%              -29%                                   -29%                 -30%
+                             array_constructor  1913/s        36%       10%                                             1%          0.77%                 --              -28%                                   -28%                 -29%
+                              caching_document  2655/s        88%       53%                                            40%            40%                39%                --                                 -0.58%                  -2%
+         array_constructor_static_array_length  2671/s        89%       53%                                            41%            41%                40%             0.59%                                     --               -0.99%
+                           static_array_length  2697/s        91%       55%                                            43%            42%                41%                2%                                     1%                   --
+Tests duration: 16.233 seconds.
+Total duration: 24.328 seconds.
